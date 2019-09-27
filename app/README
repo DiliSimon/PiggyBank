@@ -1,0 +1,11 @@
+1. There shouldn't be an undo mechanism for two reasons. First, incorrect inputs are already handled
+by the confirmation page, so there is no necessity for undo. Second, undo button may be pushed accidently,
+and will result in data lost if the user don't have backup.
+
+2. Yes. Because if the user want to input some new amount of money, it will be cumbersome if he or she
+needs to delete the last input manually.
+
+3. Nothing should happens. The app should examine the integrity of the input before entering into the confirmation page.
+
+4. I add a reset button, since if will be convenient if one can clear all the data after some big consumptions
+in the real world. I also removed the big color segments in the confirmation page, since I want it to look cleaner.
