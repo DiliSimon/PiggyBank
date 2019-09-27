@@ -36,20 +36,20 @@ public class SaveConfirmationActivity extends AppCompatActivity {
 
         float temp_balance;
         if(A_M.equals("add")){
-            String hint = message + " will be deposited to your account";
+            String hint = message + "$ will be deposited to your account";
             TextView t = (TextView)findViewById(R.id.hint);
             t.setText(hint);
             ifadd = true;
             temp_balance = Float.parseFloat(message) + current_balance;
         }else{
-            String hint = message + " will be drawn from your account";
+            String hint = message + "$ will be drawn from your account";
             TextView t = (TextView)findViewById(R.id.hint);
             t.setText(hint);
             ifadd = false;
             temp_balance = current_balance - Float.parseFloat(message);
         }
         TextView t = (TextView)findViewById(R.id.confirmvalue);
-        t.setText(Float.toString(temp_balance));
+        t.setText(String.format("%.2f", temp_balance));
         cache_value = Float.parseFloat(message);
     }
 

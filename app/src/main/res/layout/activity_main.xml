@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0D1E0"
+    android:background="#FDF1F8"
     android:onClick="decrease_amount"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/RemainBalance"
         android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
         android:background="#9EDD7D9F"
         android:text="@string/remainingbalance"
         android:textSize="36sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
         android:ems="10"
-        android:inputType="textPersonName|numberDecimal|textEmailAddress"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -42,6 +43,7 @@
         android:onClick="increase_amount"
         android:shadowColor="#4CAF50"
         android:text="@string/addsign"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,10 +51,11 @@
         android:id="@+id/minus"
         android:layout_width="103dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#90E74F83"
         android:onClick="decrease_amount"
         android:text="@string/minusign"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/add"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -63,8 +66,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#9A4CAF50"
+        android:onClick="value_1"
         android:shadowColor="#4CAF50"
-        android:text="1$"
+        android:text="$1"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -74,52 +78,61 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#A94CAF50"
-        android:text="10$"
+        android:onClick="value_10"
+        android:text="$10"
         app:layout_constraintBottom_toBottomOf="@+id/big1"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="#E6AA58"
-        android:text="Button"
+        android:onClick="value_001"
+        android:text="¢1"
+        android:textColor="#0A0A0A"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/big1"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="#E3A758"
-        android:text="Button"
+        android:onClick="value_025"
+        android:text="¢50"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/big10"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button12"
-        android:layout_width="28dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="#E5A958"
-        android:text="Button"
+        android:onClick="value_005"
+        android:text="¢5"
+        android:textColor="#070707"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/button10"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
-        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toEndOf="@+id/button10" />
 
     <Button
         android:id="@+id/button13"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="#E4A858"
-        android:text="Button"
+        android:onClick="value_01"
+        android:text="25¢"
+        android:textColor="#0A0A0A"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/button11"
         app:layout_constraintEnd_toStartOf="@+id/button11" />
 
@@ -149,9 +162,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="106dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="121dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/pig" />
@@ -163,9 +176,45 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#79B177"
-        android:text="5$"
+        android:onClick="value_5"
+        android:text="$5"
         app:layout_constraintBottom_toBottomOf="@+id/big10"
         app:layout_constraintEnd_toStartOf="@+id/big10"
         app:layout_constraintStart_toEndOf="@+id/big1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="$"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="65dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="4dp"
+        android:text="$"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/RemainBalance" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#7EE8A8C0"
+        android:onClick="reset"
+        android:text="Reset Balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
