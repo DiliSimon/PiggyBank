@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/RemainBalance"
-        android:layout_width="145dp"
-        android:layout_height="60dp"
+        android:layout_width="160dp"
+        android:layout_height="58dp"
         android:layout_marginTop="36dp"
         android:background="#9EDD7D9F"
         android:text="@string/remainingbalance"
@@ -196,13 +196,14 @@
         android:id="@+id/textView4"
         android:layout_width="65dp"
         android:layout_height="78dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
         android:text="$"
         android:textAlignment="textEnd"
         android:textSize="36sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintEnd_toEndOf="@+id/RemainBalance"
+        app:layout_constraintTop_toTopOf="@+id/reset" />
 
     <Button
         android:id="@+id/reset"
