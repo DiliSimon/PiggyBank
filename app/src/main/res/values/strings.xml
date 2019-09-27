@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UI_A2</string>
+    <string name="title_activity_save_confirmation">SaveConfirmationActivity</string>
+    <string name="remainingbalance">0 $</string>
+    <string name="addsign">+</string>
+    <string name="minusign">-</string>
+</resources>
